@@ -42,7 +42,7 @@ before_install:
 before_script:
   - chmod +x gradlew
   #Emulator instance
-  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_api/$ANDROID_ABI
+  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_apis/$ANDROID_ABI
   - emulator -avd test -no-window & 
   - android-wait-for-emulator
   - abd shell inut keyevent 82 &
