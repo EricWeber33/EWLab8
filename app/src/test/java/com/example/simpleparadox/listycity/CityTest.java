@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CityTest {
 
-    private City mockCity() {
-        return new City("Edmonton", "Alberta");
-    }
+    private City mockCity = new City("Edmonton", "Alberta");
+
 
     @Test
     void TestSet(){
-        mockCity().setCityName("Vermillion");
-        assertEquals("Vermillion", mockCity().getCityName());
+        mockCity.setCity("Vermillion");
+        String newName = mockCity.getCityName();
+        assertEquals("Vermillion", newName);
     }
 
 
